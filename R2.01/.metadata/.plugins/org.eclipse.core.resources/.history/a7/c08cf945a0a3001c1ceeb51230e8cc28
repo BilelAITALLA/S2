@@ -1,0 +1,13 @@
+
+public class Cavalier extends SoldatAvecCharge{
+
+	public Cavalier(int poids, String nom) {
+		super(poids, nom, 150);
+	}
+
+	public double calculVitesse() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

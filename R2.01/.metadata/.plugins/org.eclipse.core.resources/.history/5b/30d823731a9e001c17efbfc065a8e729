@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Essai {
+
+	public static void main(String[] args) {
+		Courrier lettre1 = new Lettre("Bilel", "Bonjour");
+		Courrier lettre2 = new Lettre("Nico", "Bonjour");
+		Courrier colis = new Colis("Nico", "Bilel", 1300);
+
+		ArrayList<Courrier> boite = new ArrayList<Courrier>();
+		boite.add(lettre2);
+		boite.add(lettre1);
+		boite.add(colis);
+
+		for ( int i = 0; i < boite.size (); i++) {
+			System.out.println(boite.get(i)"cout du courrier " + i + " : " + boite.get(i).coutAffranchissement());
+		}
+	}
+
+}

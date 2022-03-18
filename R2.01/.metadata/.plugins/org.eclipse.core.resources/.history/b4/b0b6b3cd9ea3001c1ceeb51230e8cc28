@@ -1,0 +1,31 @@
+
+public abstract class SoldatAvecCharge extends Soldat{
+	
+	private int charge;
+	private int chargeMax;
+	
+	public SoldatAvecCharge(int poids, String nom, int chargeMax) {
+		super(poids, nom);
+		this.chargeMax = chargeMax;
+	}
+	
+	public void setCharge(int charge) {
+		if (charge < 0 || charge > chargeMax) {
+			
+		} else {
+
+		}
+	}
+	
+	public void decharger() {
+		this.charge = 0;
+	}
+	
+	public void charger(int masseACharger) {
+		if (this.charge + masseACharger > this.chargeMax || masseACharger<=0) {
+			System.err.println("Masse à charger incorrecte ou trop élevée !");
+		} else {
+			this.charge += masseACharger;
+		}
+	}
+}

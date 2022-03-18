@@ -1,0 +1,28 @@
+
+public class Lettre implements Courrier {
+
+	private String dest;
+	private String contenu;
+	
+	public Lettre(String destinataire, String contenu) {
+		this.dest = destinataire;
+		this.contenu = contenu;
+		
+	}
+
+	public String getDestinataire() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public double coutAffranchissement() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public boolean estCorrect() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}

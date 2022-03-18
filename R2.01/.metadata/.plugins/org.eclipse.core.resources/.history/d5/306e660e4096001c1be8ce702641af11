@@ -1,0 +1,28 @@
+
+public class Message {
+	private String nomExp;
+	private String nomDest;
+	private String contenu;
+	
+	public Message(String exp, String dest, String content) {
+		this.nomExp = exp;
+		this.nomDest= dest;
+		this.contenu = content;
+	}
+
+	public String getNomExp() {
+		return this.nomExp;
+	}
+
+	public String getNomDest() {
+		return this.nomDest;
+	}
+
+	public String getContenu() {
+		return this.contenu;
+	}
+	
+	public String toString() {
+		return "Message [nomExp=" + nomExp + ", contenu=" + contenu + "]";
+	}
+}

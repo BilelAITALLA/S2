@@ -1,0 +1,6 @@
+
+public class Messagerie {
+
+	Client nicolas = new Client("Nicolas");
+	
+}

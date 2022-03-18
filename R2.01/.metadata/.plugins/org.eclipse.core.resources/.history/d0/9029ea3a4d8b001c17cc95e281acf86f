@@ -1,0 +1,86 @@
+import java.util.ArrayList;
+
+public class Banque {
+	
+	private ArrayList<Client> clients;
+	private ArrayList<Compte> comptes;
+	private String nom;
+	
+	public Banque(String nom) {
+		this.nom = nom;
+		this.clients = new ArrayList<Client>();
+		this.comptes = new ArrayList<Compte>();
+	}
+	
+	public void addClient(String nom, String adresse) {
+		Client client = new Client(nom, adresse);
+		this.clients.add(client);
+	}
+	
+	public void addClient(Client client) {
+		this.clients.add(client);
+	}
+	
+	public void addCompte(Client client, int noCompte, long soldeC) {
+		Compte compte = new Compte(client, noCompte, soldeC);
+		this.comptes.add(compte);
+	}
+	
+	public void addCompte(Compte compte) {
+		this.comptes.add(compte);
+	}
+	
+	public String listeClients() {
+		return this.clients.toString();
+	}
+	
+	public String listeComptes() {
+		return this.comptes.toString();
+	}
+	
+	public int nbClients() {
+		return this.clients.size();
+	}
+	
+	public int nbComptes() {
+		return this.comptes.size();
+	}
+	
+	public String etatCompte(int noCompte) {
+		for (Compte compte : this.comptes) {
+			if (compte.getNoCompte() == noCompte) {
+				return compte.toString();
+			}
+		} return "Il n'y a pas de comptes avec ce numéro de compte("+noCompte+")";
+	}
+	
+	public void credit(int noCompte, int montant) {
+		for (Compte compte : this.comptes) {
+			if (compte.getNoCompte() == noCompte) {
+				compte.credit(montant);
+			}
+		}
+	}
+	
+	public void debit(int noCompte, int montant) {
+		for (Compte compte : this.comptes) {
+			if (compte.getNoCompte() == noCompte) {
+				compte.debit(montant);
+			}
+		}
+	}
+	
+	public void setAdressbyName(String nom, String newAdresse) {
+		for (Client client : this.clients) {
+			if (client.getNom().equals(nom)) {
+				client.setAdresse(newAdresse);
+			}
+		}
+	}
+	
+	public ArrayList<Compte> comptesADecouvert() {
+		for (Compte compte : comptes) {
+			
+		}
+	}
+}

@@ -1,0 +1,16 @@
+
+public class Messagerie {
+	
+	public static void main(String[] args) {
+		Client nicolas = new Client("Nicolas");
+		Client bilel = new Client("Bilel");
+	
+		Serveur gmail = new Serveur();
+		
+		bilel.connexion(gmail);
+		bilel.envoyer("GROS ZEMEL", "nicolas");
+		
+		nicolas.connexion(gmail);
+		nicolas.consulter();
+	}
+}

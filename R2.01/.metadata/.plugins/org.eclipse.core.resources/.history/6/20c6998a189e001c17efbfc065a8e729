@@ -1,0 +1,23 @@
+
+public class Colis implements Courrier{
+
+	private String dest;
+	private String contenu;
+	private int poids;
+	
+	public String getDestinataire() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public double coutAffranchissement() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public boolean estCorrect() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

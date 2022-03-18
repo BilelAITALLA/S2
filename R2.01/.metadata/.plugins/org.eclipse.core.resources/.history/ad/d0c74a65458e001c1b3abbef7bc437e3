@@ -1,0 +1,65 @@
+/**
+ *  Compte.java
+ *  Compte en banque.
+ *  Cette version n'a pas de limite de découvert... (Un client peut donc débiter de l'argent autant qu'il le veut !!)
+ *  D'autre part, toutes les méthodes ne sont pas sécurisées pour assurer la cohérence de leur comportement par rapport à leur spécification.
+ *  
+ *  Cette classe permet de gérer des sommes au centime d'euro près jusqu'à (2^63-1) centimes d'euros = 92 233 720 368 547 758,07 euros (soit plus de 92 billiards d'euros).
+ *
+ *  Un compte est reponsable de : 
+ *  - donner son numéro, son solde
+ *  - créditer ou débiter un montant
+ *  - fournir une représenation affichable de son état
+ */
+public class Compte {
+
+	private int numéro;
+	private Client titulaire;
+	private long solde; // Le solde est géré en centièmes d'euros. Par exemple 1234 signifie 12 euros 34 centimes.
+	
+	
+	public Compte(int numéro, Client client, long solde) {
+		this.numéro = numéro;
+		this.titulaire = client;
+		this.solde = solde;
+	}
+
+	public Compte(int numéro, Client client) {
+		this(numéro, client, 0);
+	}
+
+	public long getSolde () {
+		return this.solde;
+	}
+
+	public int getNuméro() {
+		return this.numéro;
+	}
+	
+	// Attention : cette version ne vérifie pas le signe du montant crédité ni le dépassement de la capacité de gestion du type long.
+	public void créditer(long montant) {
+		this.solde += montant;
+	}
+
+	// Attention : cette version ne vérifie pas le signe du montant débité.
+	public void débiter(long montant) {
+		this.solde -= montant;
+	}
+
+	public boolean estADécouvert() {
+		return this.solde < 0;
+	}
+
+	@Override  
+	public String toString() {
+    	String affichageSolde;
+    	if (this.solde >= 0)
+    		affichageSolde =  this.solde/100 + " euros " + this.solde%100 + " centimes";
+    	else 
+    		affichageSolde =  "- " + (-this.solde/100) + " euros " + (-this.solde%100) + " centimes";
+    		
+        return "Compte numéro : " + this.numéro 
+        		+ " ; titulaire : " + this.titulaire.getNom()
+                + " ; solde : " + affichageSolde;
+	}
+}

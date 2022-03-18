@@ -1,0 +1,19 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class BanqueTests {
+	
+	@Test
+	public final void testVirement() {
+		Client antoine = new Client ("Antoine", "222 rue de la Paix");
+		Compte compteAntoine = new Compte(123, antoine);
+		Client claude = new Client ("Claude", "223 rue de la Paix");
+		Compte compteClaude = new Compte(124, claude);
+		compteAntoine.créditer(3456);
+		compteClaude.créditer(1526545);
+		compteClaude.virer(compteAntoine, 3456);
+		assertEquals(3456*2, compteAntoine.getSolde());
+		assertEquals(1526545-3456, actual);
+	}
+}

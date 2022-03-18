@@ -1,0 +1,14 @@
+
+public class SimpleSoldat extends Soldat{
+
+	public SimpleSoldat(int poids, String nom) {
+		super(poids, nom);
+	}
+
+	
+	public double calculVitesse() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

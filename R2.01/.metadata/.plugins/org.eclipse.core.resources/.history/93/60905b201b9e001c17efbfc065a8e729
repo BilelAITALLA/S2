@@ -1,0 +1,7 @@
+
+public class Voiture {
+	
+	private String marque;
+	private String modele;
+	private int kilometrage
+}

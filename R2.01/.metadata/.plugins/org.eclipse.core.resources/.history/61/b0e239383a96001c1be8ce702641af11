@@ -1,0 +1,20 @@
+
+public class Client {
+	private String nom;
+	private Serveur serveurActif;
+	
+	public Client(String nomClient, Serveur serveurclient) {
+		this.nom = nomClient;
+		this.serveurActif = serveurclient;
+	}
+	
+	public void envoyer(Message message) {
+		this.serveurActif.stocker(message);
+	}
+	
+	public void envoyer(String contenu, Client destinataire) {
+		Message message = new Message(this.nom, destinataire, content)
+	}
+	
+	public void consulter() {}
+}

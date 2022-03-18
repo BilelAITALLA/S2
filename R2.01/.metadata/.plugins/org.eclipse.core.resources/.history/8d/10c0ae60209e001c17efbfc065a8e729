@@ -1,0 +1,8 @@
+public class VueAgence {
+	private Agence uneAgence;
+	public VueAgence(Agence a)){
+		this .uneAgence=a;
+	}
+	public Selection () {
+		// A CODER }
+	}

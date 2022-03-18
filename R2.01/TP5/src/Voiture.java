@@ -1,0 +1,37 @@
+
+public class Voiture {
+	
+	private String marque;
+	private String modele;
+	private int kilometrage;
+	private int prixLoc;
+	
+	public Voiture(String marque, String modele, int kilometrage, int prixLoc) {
+		this.kilometrage = kilometrage;
+		this.marque = marque;
+		this.modele = modele;
+		this.prixLoc = prixLoc;
+	}
+
+	public String getMarque() {
+		return marque;
+	}
+
+	public String getModele() {
+		return modele;
+	}
+
+	public int getKilometrage() {
+		return kilometrage;
+	}
+
+	public int getPrixLoc() {
+		return prixLoc;
+	}
+
+	public String toString() {
+		return marque + " " + modele + prixLoc + " euros par jour";
+	}
+	
+	
+}

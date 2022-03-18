@@ -1,0 +1,24 @@
+
+public class Brancardier extends SoldatAvecCharge {
+
+	public Brancardier(int poids, String nom) {
+		super(poids, nom, 60);
+	}
+
+	@Override
+	public double calculVitesse() {
+		if (this.getCharge() == 0) {
+			if (this.getPoids() <= 85) {
+				return 7;
+			} else if (this.getPoids() <= 95) {
+				return 6.6;
+			} else {
+				return 6;
+			}
+		} else {
+			
+		}
+		return 0;
+	}
+
+}

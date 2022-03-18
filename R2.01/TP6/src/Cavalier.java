@@ -1,0 +1,20 @@
+
+public class Cavalier extends SoldatAvecCharge{
+
+	public Cavalier(int poids, String nom) {
+		super(poids, nom, 150);
+	}
+
+	public double calculVitesse() {
+		if (this.getCharge() == 0) {
+			return 15;
+		} else if (this.getCharge() < 50) {
+			return 13;
+		} else if (this.getCharge() < 100) {
+			return 10;
+		} else {
+			return 8;
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public abstract class Soldat {
+	
+	private int poids;
+	private String nom;
+	
+	
+	
+}

@@ -1,0 +1,8 @@
+Nom : AIT ALLA
+Prénom : Bilel
+Groupe : B2
+
+Pour réaliser le jeu de tests lié à l'étape 4 j'ai pris en compte toyu les cas de figure gagnants possibles.
+De cette manière je teste le cas gagnant horizontal, le cas gagnant vertical ainsi que les deux cas des diagonales.
+
+J'ai seulement placé mes pions de manière à atteindre ces cas sans respecter un quelquonque ordre de jeu, me permettant ainsi de gagner du temps et de ne pas àvoir des test trop longs.

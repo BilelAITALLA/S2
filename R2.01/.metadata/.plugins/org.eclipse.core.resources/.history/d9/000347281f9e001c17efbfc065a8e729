@@ -1,0 +1,10 @@
+
+public class InterCritere {
+	
+	private Critere c1;
+	private Critere c2;
+	
+	public InterCritere(Critere c1, Critere c2) {
+		this.c1 = c1;
+	}
+}

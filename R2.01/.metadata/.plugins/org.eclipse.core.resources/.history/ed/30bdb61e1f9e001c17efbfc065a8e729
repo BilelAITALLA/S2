@@ -1,0 +1,6 @@
+
+public class InterCritere {
+	
+	private Critere c1;
+	private Critere c2;
+}

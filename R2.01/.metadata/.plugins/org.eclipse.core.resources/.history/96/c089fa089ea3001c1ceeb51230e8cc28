@@ -1,0 +1,21 @@
+
+public abstract class SoldatAvecCharge extends Soldat{
+	
+	private int charge;
+	private int chargeMax;
+	
+	public SoldatAvecCharge(int poids, String nom, int charge, int chargeMax) {
+		super(poids, nom);
+		this.charge = charge;
+		this.chargeMax = chargeMax;
+	}
+	
+	public void decharger() {
+		this.charge = 0;
+	}
+	
+	public void charger(int masseACharger) {
+		this.charge += masseACharger;
+	}
+	
+}

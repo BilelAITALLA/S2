@@ -1,0 +1,28 @@
+
+public class Colis implements Courrier{
+
+	private String dest;
+	private String exp;
+	private String contenu;
+	private int poids; //en grammes
+	
+	public Colis(String dest, String exp, String contenu, int poids) {
+		this.contenu = contenu;
+		this.dest = dest;
+		this.exp = exp;
+		this.poids = poids
+	}
+	
+	public String getDestinataire() {
+		return this.dest;
+	}
+
+	public double coutAffranchissement() {
+		return (this.poids/500)+1;
+	}
+
+	public boolean estCorrect() {
+		return this.dest!=null && this.exp!=null;
+	}
+
+}

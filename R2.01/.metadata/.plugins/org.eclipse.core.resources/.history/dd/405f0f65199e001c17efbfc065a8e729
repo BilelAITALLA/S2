@@ -1,0 +1,9 @@
+
+public class Essai {
+
+	public static void main(String[] args) {
+		Courrier lettre1 = new Lettre("Bilel", "Bonjour");
+		Courrier lettre2 = new Lettre("Nico", "Bonjour");
+	}
+	
+}

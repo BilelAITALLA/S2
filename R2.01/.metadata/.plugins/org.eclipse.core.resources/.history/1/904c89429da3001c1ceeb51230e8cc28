@@ -1,0 +1,12 @@
+
+public abstract class SoldatAvecCharge extends Soldat{
+	
+	private int charge;
+	private int chargeMax
+	
+	public SoldatAvecCharge(int poids, String nom) {
+		super(poids, nom);
+		
+	}
+	
+}

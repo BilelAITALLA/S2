@@ -1,0 +1,8 @@
+public interface Critere {
+	/**
+	∗ @param v la voiture dont on teste la conformite au critere
+	∗ @return true si et seulement si la voiture est conforme au
+			∗ critere (on dit que v satisfait le critere )
+	 */
+	public boolean estSatisfaitPar (Voiture v);
+}

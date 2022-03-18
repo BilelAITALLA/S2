@@ -1,0 +1,8 @@
+
+public class Lettre implements Courrier {
+
+	private String dest;
+	private String contenu;
+	private double aff;
+	
+}

@@ -1,0 +1,7 @@
+
+public class Lancement {
+	public static void main(String[] args) {
+		Agence agence1 = new Agence();
+		agence1.ajoute(new Voiture("Opel", "Corsa", 0, 20));
+	}
+}

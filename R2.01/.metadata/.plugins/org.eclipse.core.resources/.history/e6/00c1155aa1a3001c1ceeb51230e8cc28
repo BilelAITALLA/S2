@@ -1,0 +1,15 @@
+
+public class Brancardier extends SoldatAvecCharge {
+
+	public Brancardier(int poids, String nom, int chargeMax) {
+		super(poids, nom, chargeMax);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double calculVitesse() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

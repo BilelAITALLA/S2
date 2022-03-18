@@ -1,0 +1,6 @@
+
+public class Lancement {
+	public static void main(String[] args) {
+		Agence agence1 = new Agence()
+	}
+}

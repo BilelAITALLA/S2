@@ -1,0 +1,10 @@
+
+public class CriterePrix implements Critere{
+	
+	private int prix;
+	
+	public boolean estSatisfaitPar(Voiture v) {
+		return false;
+	}
+
+}

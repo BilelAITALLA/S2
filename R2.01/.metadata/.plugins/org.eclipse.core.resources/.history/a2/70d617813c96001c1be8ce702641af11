@@ -1,0 +1,10 @@
+
+public class Messagerie {
+	
+	public static void main(String[] args) {
+		Client nicolas = new Client("Nicolas");
+		Client bilel = new Client("Bilel");
+	
+		Serveur gmail = new Serveur();
+	}
+}

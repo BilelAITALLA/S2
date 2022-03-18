@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class VueAgence {
+	private Agence uneAgence;
+
+	public VueAgence(Agence a){
+		this.uneAgence = a;
+	}
+
+	public void Selection () {
+		Scanner saisie = new Scanner(System.in);
+		ArrayList<Voiture> voituresValides;
+		ArrayList<String> marques = new ArrayList<String>();
+		for (Voiture voiture : uneAgence.getVoitures()) {
+			if (!marques.contains(voiture.getMarque())) {
+				marques.add(voiture.getMarque());
+			}
+		}
+		System.out.println("Veuillez choisir votre critere de selection :\n \t1: par prix\n \t2: par marque\n"
+				+ "\t3: par kms\n votre choix: ");
+		int choix = saisie.nextInt();
+		switch (choix) {
+		case 1:
+			System.out.println("Entrez un prix : ");
+			int prix = saisie.nextInt();
+			voituresValides = uneAgence.selection(new CriterePrix(prix));
+			break;
+		case 2:
+			System.out.println("Voici les marques de voitures de l'agence :");
+			for (int i = 0; i < marques.size(); i++) {
+				System.out.println("\t"+(i+1)+" "+marques.get(i));
+			}
+			System.out.println("Votre choix : ");
+			int marque = saisie.nextInt()-1
+			break;
+		default:
+			break;
+		}
+		
+		
+		saisie.close();
+	}
+}

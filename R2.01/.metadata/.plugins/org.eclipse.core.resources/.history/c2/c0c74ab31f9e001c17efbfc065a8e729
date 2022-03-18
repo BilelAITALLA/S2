@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class Lancement {
+	public static void main(String[] args) {
+		Agence agence1 = new Agence();
+		agence1.ajoute(new Voiture("Opel", "Corsa", 0, 20));
+		agence1.ajoute(new Voiture("Opel", "Astra", 0, 25));
+		agence1.ajoute(new Voiture("Bugatti", "Veyron", 0, 90));
+		
+		
+		Critere moins40e = new CriterePrix(40);
+		ArrayList<Voiture> moinsde40 = agence1.selection(moins40e);
+		System.out.println(moinsde40);
+		
+		Critere ford = new CritereMarque("Ford");
+		Critere ford40e = new InterCritere(ford, moins40e);
+		ArrayList<Voiture> fordMoinsde40 = agence1.selection(ford40e);
+		System.out.println(fordMoinsde40);
+		
+	}
+}

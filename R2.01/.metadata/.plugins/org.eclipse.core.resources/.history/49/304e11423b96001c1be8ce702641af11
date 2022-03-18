@@ -1,0 +1,38 @@
+
+public class Client {
+	private String nom;
+	private Serveur serveurActif;
+	
+	public Client(String nomClient) {
+		this.nom = nomClient;
+		this.serveurActif = null;
+	}
+	
+	public void envoyer(Message message) {
+		this.serveurActif.stocker(message);
+	}
+	
+	public void envoyer(String contenu, String destinataire) {
+		if (this.serveurActif != null) {
+			Message message = new Message(this.nom, destinataire, contenu);
+			this.serveurActif.stocker(message);
+		} else {
+			System.out.println("Vous n'etes connecté à aucun serveur.");
+		}
+		
+	}
+	
+	public void connexion(Serveur serveur) {
+		this.serveurActif = serveur;
+	}
+	
+	public void deconnexion
+	
+	public void consulter() {
+		if (this.serveurActif != null) {
+			System.out.println(this.serveurActif.messagesRecusPour(this.nom));
+		} else {
+			System.out.println("Vous n'etes connecté à aucun serveur.");
+		}
+	}
+}

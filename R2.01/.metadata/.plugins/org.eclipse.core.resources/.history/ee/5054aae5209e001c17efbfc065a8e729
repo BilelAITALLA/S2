@@ -1,0 +1,12 @@
+public class VueAgence {
+	private Agence uneAgence;
+
+	public VueAgence(Agence a){
+		this .uneAgence=a;
+	}
+
+	public void Selection () {
+		System.out.println("Veuillez choisir votre critere de selection :\n \t1: par prix\n \t2: par marque\n" + 
+				"3: par kms");
+	}
+}
