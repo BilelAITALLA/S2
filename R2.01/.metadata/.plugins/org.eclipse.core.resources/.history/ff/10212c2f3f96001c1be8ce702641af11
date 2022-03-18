@@ -1,6 +1,0 @@
-
-public class ServeurException extends Exception {
-	
-	public ServeurException
-	
-}

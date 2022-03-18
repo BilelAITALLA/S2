@@ -1,6 +1,0 @@
-
-public class Voiture {
-	
-	private String marque;
-	private String modèle;
-}

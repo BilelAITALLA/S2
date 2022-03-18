@@ -1,8 +1,0 @@
-
-public class Essai {
-
-	public static void main(String[] args) {
-		Courrier lettre1 = new Lettre("Bilel", contenu)
-	}
-	
-}

@@ -1,8 +1,0 @@
-
-public class ServeurException extends Exception {
-	
-	public ServeurException() {
-		System.err.println("Erreur : connecté à aucun serveur");
-	}
-	
-}
